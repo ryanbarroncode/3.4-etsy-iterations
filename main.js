@@ -43,19 +43,19 @@ console.log(woodenItems);
 * Number FIVE!!!
 */
 
-var materialsGreaterThanEight = items.filter(function(item){
-  return item.materials.length > 7;
+var materialsGreaterThanEight = items.filter(function(items){
+  return items.materials.length > 8;
+});
+
+var itemTitles = materialsGreaterThanEight.map(function(items){
+  return items.title;
+});
+var itemMaterials = materialsGreaterThanEight.map(function(items){
+  return items.materials;
 })
 
-materialsGreaterThanEight.forEach(function(item){
-  console.log(item.title);
-for(var i = 0; i > 7; i++){
-  console.log(i);
-}
-})
-console.log(materialsGreaterThanEight);
-
-
+console.log(itemTitles[0] + ' has ' + itemMaterials[0].length + ' materials' + itemMaterials[0]);
+console.log(itemTitles[1] + " has " +  itemMaterials[1].length + " materials" + itemMaterials[1]);
 /*
 *Number six!!!
 */
