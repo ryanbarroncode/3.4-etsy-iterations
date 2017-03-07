@@ -31,13 +31,13 @@ itemArray.forEach(function(item){
 /*
 * Number FOUR!!!
 */
-var woodArray = items.filter(function(item){
-  if(item.materials.indexOf("wood") !== -1){
-   console.log(item.materials);
-   console.log(item.title + " is made of wood");
-  }
-})
-console.log(woodArray);
+var wood = items.filter(function(items){
+  return items.materials.includes("wood")
+});
+var woodenItems = wood.map(function(items){
+  return items.title;
+});
+console.log(woodenItems);
 
 /*
 * Number FIVE!!!
@@ -60,6 +60,7 @@ console.log(materialsGreaterThanEight);
 *Number six!!!
 */
 
-var itemsSold = items.filter(function(item){
-  console.log(item.quantity + " were made by their sellers");
-})
+var whoMade = items.filter(function(items){
+  return items.who_made === "i_did";
+});
+console.log(whoMade.length + " were made by their sellers");
